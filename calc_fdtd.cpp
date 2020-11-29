@@ -4,7 +4,7 @@
 #include <chrono>
 #include <fstream>
 #include <string>
-#include <Eigen/Core>
+//#include <Eigen/Core>
 #include "fdtd3d.h"
 
 const int Nr{100};
@@ -53,9 +53,9 @@ int calc_fdtd( void )
     double J = 0.0;
     
     double ***Hr, ***Hth, ***Hph;
-    Hr = memory_allocate( Nr+1, Ntheta, Nphi, 0.0 );
-    Hth = memory_allocate( Nr, Ntheta+1, Nphi, 0.0 );
-    Hph = memory_allocate( Nr, Ntheta, Nphi+1, 0.0 );
+    Hr = memory_allocate3d( Nr+1, Ntheta, Nphi, 0.0 );
+    Hth = memory_allocate3d( Nr, Ntheta+1, Nphi, 0.0 );
+    Hph = memory_allocate3d( Nr, Ntheta, Nphi+1, 0.0 );
 
     double ***nEr, ***nEth, ***nEph;
     nEr = memory_allocate3d( Nr, Ntheta+1, Nphi+1, 0.0 );
@@ -80,7 +80,7 @@ int calc_fdtd( void )
     double *sigma_th, *sigma_ph, *sigma_th_h, *sigma_ph_h;
     sigma_th = new double[Ntheta + 1];
     sigma_ph = new double[Nphi + 1];
-    sigma_th_h = new doubke[Ntheta + 1];
+    sigma_th_h = new double[Ntheta + 1];
     sigma_ph_h = new double[Nphi + 1];
 
     double ****Dr_th1, ****Dr_th2, ****Dr_ph;
