@@ -70,7 +70,7 @@ void H_update(
 
 void H_update_pml(
     double ***nEr, double ***nEth, double ***nEph, double ***Hr, double ***Hth, double ***Hph,
-    double ****Hr_th1, double ****Hr_th2, double Hr_ph,
+    double ****Hr_th1, double ****Hr_th2, double ****Hr_ph,
     double ****Hth_ph, double ****Hth_r,
     double ****Hph_r, double ****Hph_th,
     double *sigma_th_h, double *sigma_ph_h, pml *idx_Hr, pml *idx_Hth, pml *idx_Hph
