@@ -4,7 +4,8 @@ OBJS = calc_fdtd.o D_update.o D_update_pml.o E_update.o H_update.o H_update_pml.
 HEADERS = fdtd3d.h main.h pml.h
 OPTS = -I/opt/include/eigen3 -std=c++1z -O3
 
-main : $(OBJS)
-	g++ -o $@ $(OBJS)
+main : $(OBJS) 
+	g++ -o $@ $(OBJS) $(OPTS)
+	
 %.o : %.cpp $(HEADERS) $(OPTS)
 	g++ -c $< $(HEADERS) $(OPTS)
