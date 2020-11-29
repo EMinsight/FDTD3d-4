@@ -195,7 +195,7 @@ int calc_fdtd( void )
             Hr_th1, Hr_th2, Hr_ph, Hth_ph, Hth_r, Hph_r, Hph_th,
             sigma_th_h, sigma_ph_h, idx_Hr, idx_Hth, idx_Hph );
 
-        std::string filename = "./result/ez_" << std::to_string(n) << ".dat";
+        std::string filename = "./result/ez_" + std::to_string(n) + ".dat";
         std::ofstream ofs(filename.c_str());
         for( int i = 0; i < Nr; i++ ){
             for( int k = 1; k < Nphi; k++ ){

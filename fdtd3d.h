@@ -1,5 +1,5 @@
-#ifndef FDTD_H_
 #define FDTD_H_
+#ifndef FDTD_H_
 
 #define _USE_MATH_DEFINES
 #include <cmath>
@@ -86,3 +86,12 @@ inline double C_3(double r, double theta){return Dt*std::cos(theta)/std::sin(the
 inline double C_4(double r, double theta, double sig){return 1.0/r/std::sin(theta)/delta_phi/(inv_Dt + sig/2.0);};
 inline double C_5(double r){return Dt/r/delta_r;};
 inline double C_6(double r, double sig){return 1.0/(inv_Dt + sig/2.0)/r/delta_theta;};
+
+#endif
+
+
+
+
+
+
+

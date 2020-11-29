@@ -1,5 +1,5 @@
-#ifndef PML_H_
 #define PML_H_
+#ifndef PML_H_
 
 class pml{
 private:
@@ -16,3 +16,5 @@ public:
     int k2(void) { return p_k2; }
 
 };
+
+#endif
